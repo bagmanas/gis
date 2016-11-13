@@ -1,0 +1,21 @@
+<sld:UserStyle xmlns="http://www.opengis.net/sld" xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml">
+  <sld:Name>Default Styler</sld:Name>
+  <sld:Title/>
+  <FeatureTypeStyle>
+     <Rule>
+          <Name>rule1</Name>
+          <Title>Gray Polygon with Black Outline</Title>
+          <Abstract>A polygon with a gray fill and a 1 pixel black outline</Abstract>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#AAAAAA</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#000000</CssParameter>
+              <CssParameter name="stroke-width">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+     </Rule>
+     {}
+   </FeatureTypeStyle>
+</sld:UserStyle>

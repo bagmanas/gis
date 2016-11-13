@@ -1,0 +1,15 @@
+<Rule>
+       <Name>{name}</Name>
+       <Title>{title}</Title>
+       <ogc:Filter>
+         <ogc:PropertyIsLessThan>
+           <ogc:PropertyName>{param}</ogc:PropertyName>
+           <ogc:Literal>{breaks}</ogc:Literal>
+         </ogc:PropertyIsLessThan>
+       </ogc:Filter>
+       <PolygonSymbolizer>
+         <Fill>
+           <CssParameter name="fill">{color}</CssParameter>
+         </Fill>
+       </PolygonSymbolizer>
+</Rule>
