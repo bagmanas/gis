@@ -30,6 +30,7 @@ def add_file_in_data_base(table, file):
     conn = psycopg2.connect(connection_string)
     cur = conn.cursor()
 
+    result = {}
     for i, column in enumerate(columns):
         # Добавляем колонку в БД
         if not column.strip().strip('"'):
@@ -54,9 +55,10 @@ def add_file_in_data_base(table, file):
                 """UPDATE {} set {}={} where "name"='{}'""".format(table,
                                                                    column,
                                                                    value, key))
+        result[column] = list(add_data.values())
         conn.commit()
     cur.close()
-
+    return result
 
 
 def make_map_region(region_from_db, region_from_file):

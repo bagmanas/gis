@@ -7,9 +7,9 @@ def hsv2rgb(h, s, v):
 
 
 def make_style(values, name_param, breaks=5):
-    with open('body') as file:
+    with open('./style_generator/body') as file:
         style = "\n".join([line.strip() for line in file])
-    with open('rule_template') as file:
+    with open('./style_generator/rule_template') as file:
         rule = "\n".join([line.strip() for line in file])
 
     values = sorted(values)

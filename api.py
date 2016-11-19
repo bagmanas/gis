@@ -9,7 +9,7 @@ credential = ('admin', 'geoserver')
 def send_style_to_server(name, style):
     # Добавляем пустой стиль в базу
     resource = 'styles'
-    payload = '<style><name>{}_style</name><filename>{}.sld</filename></style>'.format(
+    payload = '<style><name>{}</name><filename>{}.sld</filename></style>'.format(
         name, name)
     request_url = urljoin(api_entry, resource)
     headers = {'content-type': 'text/xml'}
@@ -20,7 +20,7 @@ def send_style_to_server(name, style):
                       auth=credential)
 
     # Загружаем
-    resource = 'styles/{}_style'.format(name)
+    resource = 'styles/{}'.format(name)
     headers = {'content-type': 'application/vnd.ogc.sld+xml'}
 
     request_url = urljoin(api_entry, resource)
