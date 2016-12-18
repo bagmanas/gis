@@ -3,6 +3,22 @@
   <sld:Title/>
   <FeatureTypeStyle>
      <Rule>
+       <PolygonSymbolizer>
+         <Fill>
+           <CssParameter name="fill">#40FF40</CssParameter>
+         </Fill>
+         <Stroke>
+           <CssParameter name="stroke">#FFFFFF</CssParameter>
+           <CssParameter name="stroke-width">2</CssParameter>
+         </Stroke>
+       </PolygonSymbolizer>
+       <TextSymbolizer>
+         <Label>
+           <ogc:PropertyName>name</ogc:PropertyName>
+         </Label>
+       </TextSymbolizer>
+     </Rule>
+     <Rule>
           <Name>rule1</Name>
           <Title>Gray Polygon with Black Outline</Title>
           <Abstract>A polygon with a gray fill and a 1 pixel black outline</Abstract>
@@ -11,11 +27,11 @@
               <CssParameter name="fill">#AAAAAA</CssParameter>
             </Fill>
             <Stroke>
-              <CssParameter name="stroke">#000000</CssParameter>
-              <CssParameter name="stroke-width">1</CssParameter>
+              <CssParameter name="stroke">#7727b2</CssParameter>
+              <CssParameter name="stroke-width">2</CssParameter>
             </Stroke>
           </PolygonSymbolizer>
-     </Rule>
+      </Rule>
      {}
    </FeatureTypeStyle>
 </sld:UserStyle>
